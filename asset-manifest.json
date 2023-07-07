@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/recipe_searching/static/css/main.c7ec3132.css",
-    "main.js": "/recipe_searching/static/js/main.b84b38fb.js",
-    "static/media/about.jpg": "/recipe_searching/static/media/about.809193428c173b1de33b.jpg",
-    "static/media/food_hero.jpg": "/recipe_searching/static/media/food_hero.56c2bc4f36a48881c025.jpg",
-    "index.html": "/recipe_searching/index.html",
-    "main.c7ec3132.css.map": "/recipe_searching/static/css/main.c7ec3132.css.map",
-    "main.b84b38fb.js.map": "/recipe_searching/static/js/main.b84b38fb.js.map"
+    "main.css": "/RECIPE_SEARCHING_APP/static/css/main.c7ec3132.css",
+    "main.js": "/RECIPE_SEARCHING_APP/static/js/main.637699f2.js",
+    "static/media/about.jpg": "/RECIPE_SEARCHING_APP/static/media/about.809193428c173b1de33b.jpg",
+    "static/media/food_hero.jpg": "/RECIPE_SEARCHING_APP/static/media/food_hero.56c2bc4f36a48881c025.jpg",
+    "index.html": "/RECIPE_SEARCHING_APP/index.html",
+    "main.c7ec3132.css.map": "/RECIPE_SEARCHING_APP/static/css/main.c7ec3132.css.map",
+    "main.637699f2.js.map": "/RECIPE_SEARCHING_APP/static/js/main.637699f2.js.map"
   },
   "entrypoints": [
     "static/css/main.c7ec3132.css",
-    "static/js/main.b84b38fb.js"
+    "static/js/main.637699f2.js"
   ]
 }
