@@ -134,7 +134,7 @@ const Navbar = ({ onInputChange, onValueSet, query }) => {
           ><Box sx={{
             display: "flex",
             flexDirection: "column",
-            height: "22%",
+            height: "28%",
             justifyContent: "space-between",
             padding: 2
           }}>
