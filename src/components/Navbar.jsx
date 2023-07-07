@@ -27,9 +27,7 @@ const Navbar = ({ onInputChange, onValueSet, query }) => {
 
   const [Menu, SetMenu] = useState(false);
 
-  const handleClick = () => {
-    onValueSet();
-  };
+
 
   // _________________________________Function for Search ________________________________
 
@@ -252,9 +250,7 @@ const Navbar = ({ onInputChange, onValueSet, query }) => {
         </CustomToolbox>
       </AppBar>
 
-      {/* {
-        query && <Result query={query}/>
-      } */}
+   
     </Box>
   );
 };
