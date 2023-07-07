@@ -128,15 +128,21 @@ const Navbar = ({ onInputChange, onValueSet, query }) => {
             onClose={() => {
               return SetMenu(false);
             }}
-            sx={{
-              width: "100%",
-            }}
-          >
-            <Link to="/" style={{ textDecoration: "none" }} >
+         style={{
+          width: "100%",
+         }}
+          ><Box sx={{
+            display: "flex",
+            flexDirection: "column",
+            height: "22%",
+            justifyContent: "space-between",
+            padding: 2
+          }}>
+            <Link to="/" style={{ textDecoration: "none"}} >
               <Typography
                 variant="span"
                 fontWeight={300}
-                sx={{ color: "black" }}
+                sx={{ color: "black",  }}
               >
                 Home
               </Typography>
@@ -145,7 +151,7 @@ const Navbar = ({ onInputChange, onValueSet, query }) => {
               <Typography
                 variant="span"
                 fontWeight={300}
-                sx={{ color: "black" }}
+                sx={{ color: "black", marginTop: "10px" }}
               >
                 Contact Us
               </Typography>
@@ -154,7 +160,7 @@ const Navbar = ({ onInputChange, onValueSet, query }) => {
               <Typography
                 variant="span"
                 fontWeight={300}
-                sx={{ color: "black" }}
+                sx={{ color: "black", marginTop: "10px" }}
               >
                 About Us
               </Typography>
@@ -163,7 +169,7 @@ const Navbar = ({ onInputChange, onValueSet, query }) => {
               <Typography
                 variant="span"
                 fontWeight={300}
-                sx={{ color: "black" }}
+                sx={{ color: "black", marginTop: "10px" }}
               >
                 Blogs
               </Typography>
@@ -179,10 +185,12 @@ const Navbar = ({ onInputChange, onValueSet, query }) => {
                 height: 30,
                 width: "85%",
                 marginLeft: 1,
+                marginTop: "10px"
               }}
             >
               Subscribe
             </Button>
+            </Box>
           </Drawer>
 
           {/* ___________________________RIGHT-SIDE FOR LARGE DEVICE____________________________ */}

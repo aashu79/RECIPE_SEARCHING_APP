@@ -3,13 +3,13 @@ import React from "react";
 import bgImage from "../imgs/food_hero.jpg";
 import { Link } from "react-router-dom";
 
-const Hero = ({ onValueSet, onInputChange, value }) => {
+const Hero = ({ onValueSet, onInputChange }) => {
   return (
     <Box
       height="100vh"
       sx={{
         color: "black",
-        marginTop: 8,
+        marginTop: 6,
         backgroundImage: `url(${bgImage})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",

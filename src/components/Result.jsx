@@ -10,7 +10,7 @@ const Result = ({ data, query, selected }) => {
 
   return (
     <Box>
-      <Box sx={{ flexGrow: 1, marginTop: 15, marginLeft: 10 }}>
+      <Box sx={{ flexGrow: 1, marginTop: 16, marginLeft: 7 }}>
 
        
         <Typography

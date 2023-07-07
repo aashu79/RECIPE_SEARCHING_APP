@@ -9,7 +9,7 @@ const rootElement = document.getElementById('root');
 
 // Render the App component into the root element
 ReactDOM.render(
-<Router>
+<Router basename='/RECIPE_SEARCHING_APP'>
      <App /> 
 </Router>,
  rootElement);
