@@ -76,8 +76,8 @@ const Recipe_page = ({ sData }) => {
             padding: 5,
             borderRadius: 10,
             height: {
-              xs: "20vh",
-              sm: "20vh",
+              xs: "30vh",
+              sm: "30vh",
               md: "30vh",
             },
             margin: "20px",
@@ -122,7 +122,7 @@ const Recipe_page = ({ sData }) => {
           padding: 10,
           borderRadius: 10,
 
-          width: "90vw",
+          width: "95vw",
         }}
       >
         <Typography variant="h5">Ingredients:</Typography>
