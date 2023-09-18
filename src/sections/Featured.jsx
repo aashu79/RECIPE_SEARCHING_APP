@@ -35,7 +35,7 @@ const Featured = ({ d, selected }) => {
         {data.map((item, index) => {
           return (
             <Link
-              to="/recipe"
+              to={`/recipe/${item.recipe.label}`}
               style={{
                 textDecoration: "none",
               }}

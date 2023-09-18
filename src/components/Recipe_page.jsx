@@ -1,13 +1,48 @@
 import { Box, Button, Paper, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footter from "../sections/Footter";
+import { useParams } from "react-router-dom";
+import Loader from "../components/loader/Loader"
 
-const Recipe_page = ({ sData }) => {
-  const data = sData;
-  console.log(data);
-  const ing = data.recipe.ingredients;
+const Recipe_page = () => {
+  const [loading, setLoading] = useState(true);
+  const params = useParams();
+  const [sData, setSData] = useState()
+
+const dataFetcher = async()=>{
+  const app_id = process.env.REACT_APP_APP_ID;
+  const app_key = process.env.REACT_APP_APP_KEY;
+  
+  try {
+    setLoading(true);
+    const response = await fetch(
+      `https://api.edamam.com/api/recipes/v2?type=public&q=${params.name}&app_id=${app_id}&app_key=${app_key}`
+    );
+   
+    const data = await response.json();
+     setSData(data?.hits[0])
+    } catch(err) {
+      console.log(err);
+    }
+    finally {
+      setLoading(false);
+    }
+}
+
+useEffect(()=>{
+dataFetcher();
+},[])
+
+
+  
+const ing =  sData?.recipe.ingredients;
   return (
-    <Box
+    <>
+    {
+      loading ? (<div style={{height: "90vh", display: "flex", marginTop: "50px", justifyContent: "center", alignItems: "center"}}><Loader/></div>) :
+   
+   
+   ( <Box
       container
       sx={{
         marginTop: "100px",
@@ -20,6 +55,7 @@ const Recipe_page = ({ sData }) => {
         alignItems: "center",
       }}
     >
+     
       <Typography
         variant="h3"
         sx={{
@@ -28,7 +64,7 @@ const Recipe_page = ({ sData }) => {
           textAlign: "center",
         }}
       >
-        {data.recipe.label}
+        {sData? sData.recipe.label : null}
       </Typography>
       <Box
         container
@@ -60,7 +96,7 @@ const Recipe_page = ({ sData }) => {
           }}
         >
           <img
-            src={data.recipe.image}
+            src={sData ? sData.recipe.image : null}
             style={{
               width: "100%",
               height: "100%",
@@ -92,7 +128,7 @@ const Recipe_page = ({ sData }) => {
               fontsize: "50px",
             }}
           >
-            Meal Type: {data.recipe.mealType}
+            Meal Type: {sData ? sData.recipe.mealType: null}
           </Typography>
           <Typography
             variant="h6"
@@ -102,7 +138,7 @@ const Recipe_page = ({ sData }) => {
               fontsize: "50px",
             }}
           >
-            Cuisine Type: {data.recipe.cuisineType}
+            Cuisine Type: {sData ? sData.recipe.cuisineType: null}
           </Typography>
           <Typography
             variant="h6"
@@ -112,7 +148,7 @@ const Recipe_page = ({ sData }) => {
               fontsize: "50px",
             }}
           >
-            Calories: {data.recipe.calories} Mg
+            Calories: {sData ? sData.recipe.calories : null} Mg
           </Typography>
         </Box>
       </Box>
@@ -133,9 +169,9 @@ const Recipe_page = ({ sData }) => {
             fontSize: 20,
           }}
         >
-          {ing.map((e, index) => {
+          {ing ? ing.map((e, index) => {
             return <li key={index}>{e.text}</li>;
-          })}
+          }) : null}
         </ul>
 
         <Typography
@@ -147,7 +183,7 @@ const Recipe_page = ({ sData }) => {
         >
           Check complete Recipe here:
         </Typography>
-        <a href={`${data.recipe.url}`} target="blank">
+        <a href={`${sData ? sData.recipe.url : null}`} target="blank">
           <Button
             variant="contained"
             sx={{
@@ -160,7 +196,9 @@ const Recipe_page = ({ sData }) => {
       </Box>
 
       <Footter />
-    </Box>
+    </Box>)
+  }
+  </>
   );
 };
 

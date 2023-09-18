@@ -48,7 +48,7 @@ const Recipe_Collection = ({d, selected, name}) => {
         {data.map((item, index) => {
           return (
             <Link
-              to="/recipe"
+            to={`/recipe/${item.recipe.label}`}
               style={{
                 textDecoration: "none",
               }}

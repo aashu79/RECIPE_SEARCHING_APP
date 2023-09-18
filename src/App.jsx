@@ -138,7 +138,7 @@ const App = () => {
             path="/search"
             element={value ? <Result data={data} query={value} selected={selected} /> : <Error/>}
           />
-          <Route path="/recipe" element={<Recipe_page sData={s_data} />} />
+          <Route path="/recipe/:name" element={<Recipe_page sData={s_data} />} />
           <Route path="/about" element={<About/>} />
           <Route path="/contact" element={<Contact/>} />
           <Route path="/blog" element={<Blog/>} />
