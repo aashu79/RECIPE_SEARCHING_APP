@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/RECIPE_SEARCHING_APP/static/css/main.c7ec3132.css",
-    "main.js": "/RECIPE_SEARCHING_APP/static/js/main.55b4f9ae.js",
+    "main.css": "/RECIPE_SEARCHING_APP/static/css/main.7a86b2ba.css",
+    "main.js": "/RECIPE_SEARCHING_APP/static/js/main.dbd55457.js",
     "static/media/about.jpg": "/RECIPE_SEARCHING_APP/static/media/about.809193428c173b1de33b.jpg",
     "static/media/food_hero.jpg": "/RECIPE_SEARCHING_APP/static/media/food_hero.56c2bc4f36a48881c025.jpg",
     "index.html": "/RECIPE_SEARCHING_APP/index.html",
-    "main.c7ec3132.css.map": "/RECIPE_SEARCHING_APP/static/css/main.c7ec3132.css.map",
-    "main.55b4f9ae.js.map": "/RECIPE_SEARCHING_APP/static/js/main.55b4f9ae.js.map"
+    "main.7a86b2ba.css.map": "/RECIPE_SEARCHING_APP/static/css/main.7a86b2ba.css.map",
+    "main.dbd55457.js.map": "/RECIPE_SEARCHING_APP/static/js/main.dbd55457.js.map"
   },
   "entrypoints": [
-    "static/css/main.c7ec3132.css",
-    "static/js/main.55b4f9ae.js"
+    "static/css/main.7a86b2ba.css",
+    "static/js/main.dbd55457.js"
   ]
 }
